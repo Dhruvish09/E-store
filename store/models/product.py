@@ -10,6 +10,10 @@ class Product(models.Model):
     desc = models.CharField(max_length=200,default='')
     image = models.ImageField(upload_to='media/products/')
 
+    @staticmethod
+    def get_all_prodata():
+        return Product.objects.all()
+
     def __str__(self):
         return self.name
     
