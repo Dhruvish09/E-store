@@ -14,6 +14,7 @@ def index(request):
         products = Product.get_all_products_by_categoryid(categoryID)
     else:
         products = Product.get_all_products()
+
     data = {}
     data['products'] = products
     data['categories'] = categories
@@ -24,5 +25,11 @@ def signin(request):
 
 def signup(request):
     return render(request,"signup.html")
+
+def final_reg(request):
+    return render(request,'final_reg.html')
+
+def final_log(request):
+    return render(request,'final_log.html')
 
 

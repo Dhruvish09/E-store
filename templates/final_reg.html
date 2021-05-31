@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Registration</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="{%static "Reg_Log/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css"%}">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{%static "Reg_Log/css/style.css"%}">
+
+	<style>.image-holder img{
+		width: 100%;
+		height: 109%; 
+		position: relative; 
+		left: -5%; 
+		top: -20px;}
+	</style>
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('static/bg2.jpg'); z-index: 0.6;">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="{%static "logo3.jpg"%}" alt="">
+				</div>
+
+					<form id="reg" action="/final_reg" method="post">
+					<h3>Register Your Self</h3>
+					{% csrf_token %}
+
+				
+			<div class="form-wrapper">
+						<input type="text" placeholder="Username" name="username"  class="form-control">
+						<i class="zmdi zmdi-account"></i>
+				</div>
+
+			<div class="form-wrapper">
+						<input type="text" name="email" placeholder="Email Address" class="form-control">
+						<i class="zmdi zmdi-email"></i>
+				</div>
+
+			<div class="form-wrapper">
+						<select name="" id="" class="form-control" name="gender">
+							<option value="" disabled selected>Gender</option>
+							<option value="male">Male</option>
+							<option value="femal">Female</option>
+							<option value="other">Other</option>
+						</select>
+						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+				</div>
+
+			<div class="form-wrapper">
+						<input type="password" name="password" placeholder="Password" class="form-control">
+						<i class="zmdi zmdi-lock"></i>
+				</div>
+				
+			<div class="form-wrapper">
+						<input type="password" name="c_password" placeholder="Confirm Password" class="form-control">
+						<i class="zmdi zmdi-lock"></i>
+				</div>
+					
+			<button>Register
+				<i class="zmdi zmdi-arrow-right"></i>
+			</button>
+		</form>
+			</div>
+		</div>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

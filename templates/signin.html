@@ -1,32 +1,47 @@
 {% extends 'base.html' %}
-{% block title %}Signup{% endblock  %}
+{% block title %}Signup{% endblock %}
+{% load static %}
 {% block body %}
-
+{% block css %}
+<style>
+    form img {
+        width: 52%;
+        height: 136%;
+        position: relative;
+        left: 25%;
+        top: 0px;
+        border-radius: 50%;
+    }
+</style>
+{% endblock %}
 <div class="container">
     <div class="p-3 m-3">
-        <div class="col-lg-4 mx-auto border rounded pt-4" style="padding: 2rem;"> 
+        <div class="col-lg-5 mx-auto border rounded p-3">
 
             <form action="">
-
-            <h3 class="alert alert-light mb-3"><u class="text-info">Signin Your Self!</u></h3>
+                <img src="{%static "logo3.jpg"%}" alt="">
+                <h3 class="alert alert-light mb-3 text-center"><u class="text-info">Please Signin</u></h3>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control form-control-sm"  placeholder="name@example.com">
+                    <input type="email" name="email" class="form-control form-control-sm"
+                        placeholder="name@example.com">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Username</label>
-                    <input type="text" name="username" class="form-control form-control-sm"  placeholder="@username">
+                    <input type="text" name="username" class="form-control form-control-sm" placeholder="@username">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control form-control-sm"  placeholder="****************">
+                    <input type="password" name="password" class="form-control form-control-sm"
+                        placeholder="****************">
                 </div>
 
                 <div class="mb-2">
-                    <button class="btn btn-outline-info btn-sm" type="submit">Submit</button>
+                    <button class="btn btn-outline-info btn-sm" style="position: relative; left: 10rem;"
+                        type="submit">Submit</button>
                 </div>
             </form>
 
@@ -37,4 +52,4 @@
 
 
 
-{% endblock  %}
+{% endblock %}
