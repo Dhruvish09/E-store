@@ -1,12 +1,28 @@
 from django.shortcuts import render
 from .models.product import Product
 from .models.category import Category
+from .models import category
+from store.models import product
 
 
 # Create your views here.
 def index(request):
-    products = Product.get_all_prodata()
-    categorys = Category.get_all_catdata()
-    return render(request,'index.html',{'products':products,'categorys':categorys})
+    products = None
+    categories = Category.get_all_categories()
+    categoryID = request.GET.get('category')
+    if categoryID:
+        products = Product.get_all_products_by_categoryid(categoryID)
+    else:
+        products = Product.get_all_products()
+    data = {}
+    data['products'] = products
+    data['categories'] = categories
+    return render(request,'index.html',data)
+
+def signin(request):
+    return render(request,"signin.html")
+
+def signup(request):
+    return render(request,"signup.html")
 
 
