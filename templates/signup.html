@@ -18,44 +18,56 @@
 <div class="container">
     <div class="p-3 m-3">
         <div class="col-lg-5 mx-auto border rounded p-sm-3">
+            
+            <form action="/signup" method="POST">
+                {% csrf_token %}
+            
 
-            <form action="">
 
-                <img src="{%static "logo3.jpg"%}" alt="">
+                <img src="{%static "logo3.jpg"%}" alt=""><br><br>
+                    
+                    {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            {{error}}
+                        </div>
+                    {% endif %}
+
                 <h3 class="alert alert-light mb-3 text-center"><u class="text-info">Create Your Account</u></h3>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control form-control-sm"
-                        placeholder="name@example.com">
+                        placeholder="name@example.com" value="{{value.email}}" required="">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Username</label>
-                    <input type="text" name="username" class="form-control form-control-sm" placeholder="@username">
+                    <input type="text" name="username" class="form-control form-control-sm" placeholder="@username" value="{{value.username}}" required="">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Mobile</label>
-                    <input type="text" name="mobile" class="form-control form-control-sm" placeholder="1234567890">
+                    <input type="text" name="mobile" class="form-control form-control-sm" placeholder="1234567890" value="{{value.mobile}}" required="">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control form-control-sm"
-                        placeholder="****************">
+                        placeholder="****************" required="">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
-                    <input type="password" name="password" class="form-control form-control-sm"
-                        placeholder="****************">
+                    <input type="password" name="cpassword" class="form-control form-control-sm"
+                        placeholder="****************" required="">
                 </div>
 
                 <div class="mb-2">
                     <button class="btn btn-outline-info btn-sm btn" style="position: relative; left: 9rem;"
                         type="submit">Create Account</button>
                 </div>
+
+                <h6>Already Have Account?<a href={% url 'signin' %}> Signin</a></h6>
             </form>
 
 

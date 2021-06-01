@@ -19,7 +19,15 @@
         <div class="col-lg-5 mx-auto border rounded p-3">
 
             <form action="">
-                <img src="{%static "logo3.jpg"%}" alt="">
+                <img src="{%static "logo3.jpg"%}" alt=""><br><br>
+
+                
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger" role="alert">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+
                 <h3 class="alert alert-light mb-3 text-center"><u class="text-info">Please Signin</u></h3>
 
                 <div class="mb-3">
@@ -41,8 +49,10 @@
 
                 <div class="mb-2">
                     <button class="btn btn-outline-info btn-sm" style="position: relative; left: 10rem;"
-                        type="submit">Submit</button>
+                        type="submit">Signin</button>
                 </div>
+
+                <h6>New Account?<a href={% url 'signup' %}> Signup</a></h6>
             </form>
 
 
