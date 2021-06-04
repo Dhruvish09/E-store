@@ -10,6 +10,7 @@ class Product(models.Model):
 
     name = models.CharField(max_length=50)
     price = models.IntegerField(default=0)
+    offerprice = models.IntegerField(default=0)
     category = models.ForeignKey(Category , on_delete=models.CASCADE , default=None)
     offer = models.ForeignKey(Offer , on_delete=models.CASCADE , default='',blank=True,null=True)
     start_date = models.DateField()

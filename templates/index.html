@@ -29,7 +29,7 @@
     <img src="{{products.image.url}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{products.name}}</h5>
-        <h5 class="card-title">₹{{products.price}}</h5>
+        <h5 class="card-title">₹<del>{{products.price}}</del> ₹{{products.offerprice}}</h5>
         <button type="button" class="btn btn-info btn-sm" disabled>{{products.offer}}% off</button><br><br>
         <button type="button" class="btn btn-info btn-sm" disabled>{{products.start_date}}--{{products.end_date}}</button><br><br>
         
