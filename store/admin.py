@@ -5,7 +5,7 @@ from .models.customer import Customer
 from .models.offer import Offer
 
 class AdminProduct(admin.ModelAdmin):
-    list_display = ['name','price','category']
+    list_display = ['name','price','offer','category']
 
 class CustomerData(admin.ModelAdmin):
     list_display = ['username','mobile','email']
