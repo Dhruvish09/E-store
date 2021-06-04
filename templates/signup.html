@@ -67,7 +67,10 @@
                         type="submit">Create Account</button>
                 </div>
 
-                <h6>Already Have Account?<a href={% url 'signin' %}> Signin</a></h6>
+                <div class="alert alert-info btn-sm" role="alert">
+                    Already Have Account? <a  href={% url 'signin' %} class="alert-link">Signin</a>
+                </div>
+
             </form>
 
 

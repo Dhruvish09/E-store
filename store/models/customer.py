@@ -16,6 +16,16 @@ class Customer(models.Model):
             return True
         return False
 
+    def userExists(self):
+        if Customer.objects.filter(username = self.username):
+            return True
+        return False
+    
+    def mobileExists(self):
+        if Customer.objects.filter(mobile = self.mobile):
+            return True
+        return False
+
     def __str__(self):
         return self.username
     

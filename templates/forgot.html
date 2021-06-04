@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Signin{% endblock %}
+{% block title %}Forgot{% endblock %}
 {% load static %}
 {% block body %}
 {% block css %}
@@ -16,19 +16,20 @@
 {% endblock %}
 <div class="container">
     <div class="p-3 m-3">
-        <div class="col-lg-5 mx-auto border rounded p-3">
+        <div class="col-lg-5 mx-auto border rounded p-4">
 
-            <form action="">
+            <form action="/forgot" method="POST">
+                {% csrf_token %}
                 <img src="{%static "logo3.jpg"%}" alt=""><br><br>
 
                 
                 {% if messages %}
                     {% for message in messages %}
-                        <div class="alert alert-success" role="alert">{{ message }}</div>
+                        <div class="alert alert-danger" role="alert">{{ message }}</div>
                     {% endfor %}
                 {% endif %}
 
-                <h3 class="alert alert-light mb-3 text-center"><u class="text-info">Please Signin</u></h3>
+                <h3 class="alert alert-light mb-3 text-center"><u class="text-info">Forgott Your Password!!</u></h3>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -36,22 +37,12 @@
                         placeholder="name@example.com">
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control form-control-sm"
-                        placeholder="****************">
-                </div>
 
                 <div class="mb-2">
                     <button class="btn btn-outline-info btn-sm" style="position: relative; left: 10rem;"
-                        type="submit">Signin</button>
+                        type="submit">Forgot</button>
                 </div>
 
-                <div class="alert alert-info btn-sm" role="alert">
-                    Forgot Your Password? <a href={% url 'forgot' %}  class="alert-link btn-sm"> Forgot</a><br>
-                    Already Have Account? <a href={% url 'signup' %}  class="alert-link btn-sm"> Signup</a>
-
-                </div>
 
             </form>
 
