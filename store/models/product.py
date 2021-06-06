@@ -5,6 +5,7 @@ from django.db.models.enums import Choices
 from django.db.models.fields.related import ManyToManyField
 from .category import Category
 from .offer import Offer
+from store.models import offer
 
 class Product(models.Model):
 
