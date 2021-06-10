@@ -6,6 +6,7 @@ from .models.offer import Offer
 
 class AdminProduct(admin.ModelAdmin):
     list_display = ['name','price','offer','category']
+    ordering = ['category']
 
 class CustomerData(admin.ModelAdmin):
     list_display = ['username','mobile','email']
