@@ -11,7 +11,10 @@ class AdminProduct(admin.ModelAdmin):
 class CustomerData(admin.ModelAdmin):
     list_display = ['username','mobile','email']
 
+class OfferData(admin.ModelAdmin):
+    ordering = ['Discount']
+
 admin.site.register(Product , AdminProduct)
 admin.site.register(Category)
-admin.site.register(Offer)
+admin.site.register(Offer,OfferData)
 admin.site.register(Customer, CustomerData)

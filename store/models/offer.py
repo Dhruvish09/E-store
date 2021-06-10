@@ -10,5 +10,5 @@ class Offer(models.Model):
         return Offer.objects.all()
 
     def __str__(self):
-        return self.Discount
+        return  self.Discount + '%'
     
