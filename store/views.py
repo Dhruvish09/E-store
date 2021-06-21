@@ -1,6 +1,6 @@
 from store.models import offer
 # from store.models.offer import Offer
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,HttpResponseRedirect
 from django.contrib import messages
 from .models.product import Product
 from .models.category import Category
@@ -112,8 +112,40 @@ def signup(request):
     else:
         return Registeruser(request)
 
+# def signin(request):
+#     if request.method == 'GET':
+#         return render(request, "signin.html")
+#     if request.method == 'POST':
+#         print("enter 1st step")
+#         if Customer.objects.filter(email=request.POST['email'], password=request.POST['password']).exists():
+#             member = Customer.objects.get(email=request.POST['email'], password=request.POST['password'])
+#             print("enter 2nd step")
+#             return render(request, 'index.html', {'member': member})
+#         else:
+#             context = {'msg': 'Invalid username or password'}
+#             print("enter 3rd step")
+#             return render(request, 'signin.html', context)
+#     print("ERROR")
+#     return render(request, "signin.html")
 def signin(request):
-    return render(request, "signin.html")
+    if request.method == "GET":
+        return render(request,'signin.html')
+    else:
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        client = Customer.get_customer_by_email(email)
+        error_message = None
+        if client:
+            flag = check_password(password,client.password)
+            if flag:
+                return redirect('index')
+                # return redirect('/Dashboard',{"username":username,"email":email})
+            else:
+                error_message = 'Email Or Password Invalid!!'
+        else:
+            error_message = 'Email Or Password Invalid!!'
+        return render(request,'signin.html',{'error':error_message})
+
 
 def forgot(request):
     if request.method == 'GET':
@@ -123,4 +155,3 @@ def forgot(request):
     otp.register()
     messages.success(request,'Send Password in your Registred Email!!')
     return redirect('signin')
-    

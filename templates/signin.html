@@ -18,10 +18,13 @@
     <div class="p-3 m-3">
         <div class="col-lg-5 mx-auto border rounded p-3">
 
-            <form action="">
+{{error}}
+            <form action="/signin" method="POST">
+            {% csrf_token %}
                 <img src="{%static "logo3.jpg"%}" alt=""><br><br>
 
                 
+            
                 {% if messages %}
                     {% for message in messages %}
                         <div class="alert alert-success" role="alert">{{ message }}</div>

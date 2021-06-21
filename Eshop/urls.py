@@ -17,10 +17,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
+admin.site.site_header = "E-store Admin"
+admin.site.site_title = "E-store"
+admin.site.index_title = "Admin Portal"
 
 
 
 urlpatterns = [
+    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     path('admin/', admin.site.urls),
     path('', include('store.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

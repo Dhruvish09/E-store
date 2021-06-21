@@ -25,6 +25,13 @@ class Customer(models.Model):
         if Customer.objects.filter(mobile = self.mobile):
             return True
         return False
+    
+    @staticmethod
+    def get_customer_by_email(email):
+        try:
+            return Customer.objects.get(email=email)
+        except:
+            return False
 
     def __str__(self):
         return self.username
