@@ -47,19 +47,21 @@
   </button>
 </div>
 
+<h3>Email Id is :{{request.user.email}}</h3>
+
 <div class="container-fluid mt-3">
   <div class="row">
 
   <div class="col-lg-3 max-auto">
     <div class="list-group">
-     <video width="320" height="240" controls autoplay loop >
+     <video width="320" height="240" controls autoplay loop controlsList="nodownload" >
       <source src="{%static "v3.mp4"%}" type="video/mp4">
     </video>
-    <video width="320" height="240" controls autoplay loop >
-      <source src="{%static "v2.mp4"%}" type="video/mp4">
-    </video>
-    <video width="320" height="240" controls autoplay loop>
+    <video width="320" height="240" controls autoplay loop controlsList="nodownload">
       <source src="{%static "v1.mp4"%}" type="video/mp4">
+    </video>    
+	<video width="320" height="240" controls autoplay loop controlsList="nodownload">
+      <source src="{%static "v5.mp4"%}" type="video/mp4">
     </video>
     </div>
   </div>
