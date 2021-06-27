@@ -10,6 +10,7 @@ class Signin(View):
         return render(request, 'signin.html')
     
     def post(self , request):
+
         email = request.POST.get('email')
         password = request.POST.get('password')
         customer = Customer.get_customer_by_email(email)
