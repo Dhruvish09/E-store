@@ -46,16 +46,15 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
- <h2>Username:{{ user.username.title}} </h2>
-<h3>Email Id is :{{request.user}}</h3>
-<p>Your ID is : {{email}} </p>
+
+<h3>{{user.email}}</h3>
 
 <div class="container-fluid mt-3">
   <div class="row">
 
   <div class="col-lg-3 max-auto">
     <div class="list-group">
-     <video width="320" height="240" controls autoplay loop controlsList="nodownload" >
+     <video width="320" height="240" controls autoplay loop controlsList="nodownload">
       <source src="{%static "v3.mp4"%}" type="video/mp4">
     </video>
     <video width="320" height="240" controls autoplay loop controlsList="nodownload">
