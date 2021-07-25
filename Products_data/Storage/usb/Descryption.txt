@@ -1,0 +1,4 @@
+Name: SanDisk usb
+Desc: SanDisk Ultra Dual Drive Luxe USB Type-C™ 256GB, Metal Pendrive for Mobile 
+price:₹ 3,789   
+

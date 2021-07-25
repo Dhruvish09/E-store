@@ -1,0 +1,4 @@
+Name:ADATA Ram
+Desc:ADATA Premier 4GB 1600Mhz DDR3L RAM Memory Module for Notebooks and Laptops - ADDS1600W4G11-R 
+price:₹ 2290.30 
+

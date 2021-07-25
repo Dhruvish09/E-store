@@ -1,0 +1,4 @@
+Name: Macbook Laptop
+Desc: Apple M1 chip with 8‑core CPU, 8‑core GPU and 16‑core Neural Engine, 8GB unified memory, 256GB SSD storage, 13-inch Retina display with True Tone, Backlit Magic Keyboard - US English, Touch Bar and Touch ID Two Thunderbolt / USB 4 ports
+price:₹ 1,22,534   
+

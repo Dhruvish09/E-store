@@ -1,0 +1,4 @@
+Name: SanDisk Memory_card
+Desc: SanDisk Ultra UHS I 1TB MicroSD Card 120MB/s R, for Smartphones 
+price:₹ 15,249   
+

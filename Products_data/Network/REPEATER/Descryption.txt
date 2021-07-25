@@ -1,0 +1,4 @@
+Name: Tenda Repeater
+Desc: Tenda A301 V2 Wireless N300 Universal Range Extender/Repeater
+price:₹ 1,899   
+

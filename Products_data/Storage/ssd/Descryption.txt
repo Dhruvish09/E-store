@@ -1,0 +1,4 @@
+Name: Crucial SSD
+Desc: Crucial MX500 2TB SATA 2.5-inch 7mm Internal SSD (CT2000MX500SSD1) 
+price:₹ 18,449   
+

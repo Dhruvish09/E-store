@@ -1,0 +1,4 @@
+Name: Asus Laptop
+Desc: ASUS VivoBook Ultra 15 Ryzen 7 4700U 15.6-inch Laptop (8GB/1TB/256GB NVMe SSD/Win10/Integrated Graphics/Bespoke Black/1.80 kg), M513IA-EJ313T +Microsoft 365 Personal -  One Year Subscription Included  
+price:₹ 64,594   
+
