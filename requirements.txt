@@ -1,5 +1,4 @@
-asgiref==3.5.2
-backports.zoneinfo==0.2.1
+asgiref==3.5.2backports.zoneinfo==0.2.1;python_version<"3.9"
 datetime-truncate==1.1.1
 Django==4.1
 django-admin-charts==1.1.0
