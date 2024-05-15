@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'Eshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'eshopdb',
         'HOST': 'database-1.cmm3ewlz88z2.ap-south-1.rds.amazonaws.com',
-        'USER': 'admin',
+        'USER': 'dhruv',
         'PASSWORD': 'dhruv612000',
-        'PORT': '3306',
+        'PORT': '5432',
     }
 }
 
